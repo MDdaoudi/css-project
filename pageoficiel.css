@@ -1,0 +1,1102 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: #f4f4f9;
+}
+/* --- Barre de navigation principale --- */
+.menu {
+  background: linear-gradient(90deg, #0b1a36, #122850);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  width: 100%;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+}
+
+/* --- Images du menu --- */
+.menu nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.menu nav img {
+  transition: 0.3s ease;
+  width: 60px;
+  height: 80px;
+}
+
+@keyframes zoomInOut {
+  0%, 100% {
+  transform: scale(1); 
+  }
+  50% {
+  transform: scale(1.2);
+  }
+  }
+
+
+
+
+.menu nav img {
+filter: brightness(0.8);
+animation: zoomInOut 2s ease-in-out infinite; /* dure*/
+} 
+.LOGOOFICIEL{
+filter: brightness(0.8);
+animation: zoomInOut 2s ease-in-out infinite;
+}
+.discover{
+filter: brightness(0.8);
+animation: zoomInOut 2s ease-in-out infinite;
+}
+
+.menu nav img:hover {
+filter:contrast(1); 
+}
+
+/* --- Liens principaux --- */
+.menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu ul li {
+  position: relative;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #f8f9fa;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.menu ul li a:hover {
+  background-color: #e6a419;
+  color: #000;
+  transform: scale(1.1);
+}
+
+.bi-telephone-inbound{
+  color: #fbfdfe;
+  font-size: 35px;
+  filter: brightness(1);
+  transform: scale(360deg);
+}
+
+.nav a i:hover {
+  filter: brightness(1);
+  transform: scale(1.5); 
+  transition: transform 0.3s ease; 
+}
+
+/* --- Sous-menus --- */
+.langauge {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #1b3759;
+  border-radius: 10px;
+  padding: 10px 0;
+  display: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  display: block;
+}
+
+.langauge li a {
+  color: #f0f9ff;
+  font-size: 16px;
+  display: block;
+  padding: 8px 25px;
+  transition: 0.3s ease;
+}
+
+.langauge li a:hover {
+  background-color: #e6a419;
+  color: #000;
+  transform: scale(1.1);
+}
+
+.menu ul li:hover .langauge {
+  display: block;
+}
+
+/* --- Sous-menus avec affichage limité --- */
+.langauge {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #1b3759;
+  border-radius: 10px;
+  padding: 10px 0;
+  display: none;
+  max-height: 0;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Transition pour sous-menu actif --- */
+.menu ul li:hover .langauge {
+  display: block;
+  max-height: 300px;
+}
+
+/* --- Amélioration des liens --- */
+.langauge li a {
+  color: #e6e9f2;
+  font-size: 16px;
+  padding: 8px 20px;
+  text-decoration: none;
+  display: block;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.langauge li a:hover {
+  background-color: #e6a419;
+  color: #000;
+  transform: scale(1.1);
+  position: relative;
+  z-index: 1;
+}
+
+/* --- Ajustement mobile --- */
+@media (max-width: 768px) {
+  .langauge {
+      display: none; 
+  }
+
+  .menu ul li:hover .langauge {
+      display: none; 
+  }
+}
+
+/* --- Boutons --- */
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-custom {
+  font-size: 16px;
+  padding: 10px 25px;
+  border-radius: 30px;
+  background-color: #f0f9ff;
+  color: #0b1a36;
+  text-decoration: none;
+  text-transform: uppercase;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: 0.5s ease-in-out;
+  animation: pulse 2s infinite;
+  transition: all 0.3s ease;
+
+}
+
+.btn-custom:hover {
+  background: linear-gradient(90deg, #e6a419, #f4c842);
+  color: #000;
+  animation: none; /* Arrêter l'animation au survol */
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(230, 164, 25, 1);
+  
+}
+
+/* --- Adaptation pour écrans petits --- */
+@media (max-width: 768px) {
+  .menu {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: static;
+  }
+
+  .menu ul {
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 15px;
+  }
+
+  .buttons {
+      margin-top: 15px;
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .langauge {
+      padding: 10px;
+      box-shadow: none;
+  }
+}
+.menu ul li a:target {
+  border-bottom: 2px solid #e6a419; 
+  font-weight: bold;
+}
+
+
+/* --- image --- */
+
+.imag {
+  border-top: 3px solid white;
+  z-index: -1;
+  background-image: url("image/working-out-4-scaled.jpg");
+  width: 100%;
+  height: 700px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  opacity: 0.9;
+}
+
+.imag .content {
+  position: absolute;
+  text-align: center;
+  color: #fff;
+  font-size: 36px;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px #000;
+}
+
+.imag .content button {
+  margin-top: 20px;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #e6a419;
+  color: #000;
+  cursor: pointer;/*!!!!!!!!*/
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.imag .content button:hover {
+  background-color: #f4c842;
+}
+
+
+/* --- les paragraph--- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* --- les liens--- */
+.menu ul li a {
+  position: relative;
+  overflow: hidden;
+  padding: 10px 20px;
+}
+
+.menu ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 4px;
+  background: #e6a419;
+  transition: all 0.3s ease;
+}
+
+.menu ul li a:hover::after {
+  width: 100%;
+}
+
+.imag {
+
+  filter: grayscale(20%);
+}
+
+.imag:hover {
+  filter: grayscale(0%);
+  transition: 0.5s;
+}
+
+.imag .content button {
+  background: linear-gradient(135deg, #ff9800, #ffc107);
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 8px 15px rgba(255, 152, 0, 0.3);
+  transition: 0.4s;
+}
+
+.imag .content button:hover {
+  transform: scale(1.2) rotate(3deg);
+  background: linear-gradient(135deg, #ffc107, #ff9800);
+}
+
+
+/* contenaire gym house */
+.titre{
+color: rgb(16, 21, 21);
+margin-bottom: 30px;
+height: 150px;
+display: flex;
+align-items: end;
+padding-left: 70px;
+
+}
+
+.titre h1 span{
+color: rgb(7, 145, 176);
+}
+
+
+
+/* image fitness and definition */
+.ft{
+width: 100%;
+height: 400px;
+display: flex;
+padding-left: 70px;
+
+}
+.ft p{
+width: 40%;
+color: rgb(8, 9, 9);
+margin: auto;
+font-family:cursive;
+text-align: left;
+font-size:  x-large;
+align-items: center;
+}
+.ft img{
+width: 40%;
+border: 5px solid rgb(7, 145, 176);
+border-radius: 20px;
+}
+
+/* les image gym  */
+
+.fitness-items {
+display: flex;
+justify-content: space-evenly;
+flex-wrap: wrap; 
+margin-top: 50px;
+box-shadow: 0 6px 8px rgba(0, 0, 0, 0.6);
+border-radius: 10px;
+text-align: center;
+
+}
+
+
+.fitness-item {
+background:rgb(247, 247, 247);
+border: 1px solid #ddd;
+border-radius: 10px;
+padding: 20px;
+width: 300px;
+text-align: center;
+margin-bottom: 20px;
+transition-duration: 2S;  
+
+}
+
+
+.fitness-item img {
+width: 100%;
+border-radius: 10px;
+height: 250px;
+}
+
+.fitness-item h3 {
+font-size: 25px;
+margin: 15px 0 10px;
+}
+
+.fitness-item  p{
+a{ 
+text-decoration: none;
+font-size: 20px;
+color: #0e0a0a;
+}
+:hover{
+transform: scale(1,2,1,2);
+padding: 10px;
+border: 3px solid; 
+border-radius: 10px;
+background-color:  rgb(255, 255, 255);
+color:rgb(4, 6, 6);
+}
+}  
+                                    /* image home and definition */
+
+.gymhouse{
+width: 100%;
+height: 400px;
+display: flex;
+padding-left: 70px;
+}
+.gymhouse p{
+width: 40%;
+color: rgb(8, 9, 9);
+margin: auto;
+font-family:cursive;
+text-align: left;
+font-size:  x-large;
+align-items: center;
+}
+
+.gymhouse img{
+width: 40%;
+border: 5px solid rgb(7, 145, 176);
+border-radius: 20px;
+}
+
+
+                           /* les image home  */
+
+.house-items {
+display: flex;
+justify-content: space-evenly;
+flex-wrap: wrap; 
+margin-top: 50px;
+}
+
+
+.house-item {
+background:rgb(247, 247, 247);
+border: 1px solid #ddd;
+border-radius: 10px;
+padding: 20px;
+width: 300px;
+text-align: center;
+margin-bottom: 20px;
+}
+
+.house-item img {
+width: 100%;
+border-radius: 10px;
+height: 250px;
+}
+
+.house-item h3 {
+font-size: 25px;
+margin: 15px 0 10px;
+}
+
+.house-item  p{
+a{
+text-decoration: none;
+font-size: 20px;
+color: #100e0e;
+}
+:hover{
+transform: scale(1,2,1,2);
+padding: 10px;
+border: 3px solid; 
+border-radius: 10px;
+background-color:  rgb(255, 255, 255);
+color:rgb(4, 6, 6);
+}
+}
+
+                              
+
+                       /* image proteine and definition */
+.proteine{
+width: 100%;
+height: 400px;
+display: flex;
+padding-left: 70px;
+}
+.proteine p{
+width: 40%;
+color: rgb(8, 9, 9);
+margin: auto;
+font-family:cursive;
+text-align: left;
+font-size:  x-large;
+align-items: center;    
+}
+
+.proteine img{
+width: 40%;
+border: 5px solid rgb(7, 145, 176);
+border-radius: 20px;
+}
+
+
+/*les image pro */
+
+.proteine-items {
+display: flex;
+justify-content: space-evenly;
+flex-wrap: wrap; 
+margin-top: 50px;
+}
+
+
+.proteine-item {
+background:rgb(247, 247, 247);
+border: 1px solid #ddd;
+border-radius: 10px;
+padding: 20px;
+width: 300px;
+text-align: center;
+margin-bottom: 20px;
+}
+
+.proteine-item img {
+width: 100%;
+border-radius: 10px;
+height: 250px;
+}
+
+.proteine-item h3 {
+font-size: 25px;
+margin: 15px 0 10px;
+}
+
+.proteine-item  p{
+a{
+text-decoration: none;
+font-size: 20px;
+color: #040303;
+}
+:hover{
+transform: scale(1,2,1,2);
+padding: 10px;
+border: 3px solid; 
+border-radius: 10px;
+background-color:  rgb(255, 255, 255);
+color:rgb(4, 6, 6);
+}
+}
+
+                                      
+
+
+
+
+                                       /* image boxing and definition */
+.boxing{
+width: 100%;
+height: 400px;
+display: flex;
+padding-left: 70px;
+}
+.boxing p{
+width: 40%;
+color: rgb(8, 9, 9);
+margin: auto;
+font-family:cursive;
+text-align: left;
+font-size:  x-large;
+align-items: center;
+}
+
+.boxing img{
+width: 40%;
+border: 5px solid rgb(7, 145, 176);
+border-radius: 20px;
+}
+/*les image boxing */
+
+.boxing-items {
+display: flex;
+justify-content: space-evenly;
+flex-wrap: wrap; 
+margin-top: 50px;
+}
+
+
+.boxing-item {
+background:rgb(247, 247, 247);
+border: 1px solid #ddd;
+border-radius: 10px;
+padding: 20px;
+width: 300px;
+text-align: center;
+margin-bottom: 20px;
+}
+
+.boxing-item img {
+width: 100%;
+border-radius: 10px;
+height: 250px;
+}
+
+.boxing-item h3 {
+font-size: 25px;
+margin: 15px 0 10px;
+}
+
+.boxing-item  p{
+  a{
+  text-decoration: none;
+  font-size: 20px;
+  color: #040303;
+  }
+  :hover{
+  transform: scale(1,2,1,2);
+  padding: 10px;
+  border: 3px solid; 
+  border-radius: 10px;
+  background-color:  rgb(255, 255, 255);
+  color:rgb(4, 6, 6);
+  }
+  }
+
+
+/* Style pour le footer principal */
+footer h2 {
+background: linear-gradient(to right, rgb(207, 210, 210), rgb(189, 195, 199)); /* Dégradé doux */
+text-align: center;
+font-family: "Times New Roman", serif;
+font-size: xx-large;
+padding: 10px;
+border-bottom: 2px solid rgb(120, 120, 120); 
+}
+footer video {
+width: 90%;
+height: auto; 
+margin: 20px auto;
+display: block; /* Centrer la vidéo */
+border-radius: 10px;
+border: 5px solid rgba(0, 0, 0, 0.2); 
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); 
+}
+
+
+
+
+/* Conteneur secondaire pour des sections propres */
+.sou {
+background: rgb(34, 34, 34); 
+height: auto;
+width: 100%;
+display: flex;
+justify-content: space-between;
+padding: 20px 50px; 
+flex-wrap: wrap;
+}
+
+/* Liens de contenu */
+.lien {
+margin-top: 20px;
+margin-left: 20px;
+max-width: 250px;
+}
+.lien h3 {
+color: white;
+margin-left: 12px;
+font-family: "Cambria", serif;
+border-bottom: 1px solid white; 
+}
+.lien li {
+margin-top: 10px;
+list-style: square; 
+}
+.lien a {
+color: white;
+margin-left: 15px;
+text-decoration: none; 
+font-size: 15px;
+}
+.lien a:hover {
+color: rgb(30, 144, 255); 
+text-decoration: underline; 
+}
+
+
+
+
+/* Style pour l'effet hover, pour améliorer l'interactivité */
+.hovimg:hover{
+transform: scale(1.2, 1.2); /* Zoom fluide */
+padding: 15px;
+border: 3px solid rgb(30, 144, 255); 
+border-radius: 15px;
+background-color: rgba(255, 255, 255, 0.9); 
+color: rgb(4, 6, 6); 
+box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); 
+transition: all 0.5s ease-in-out; 
+
+}
+.fitness-item:hover{
+  transform: scale(1.2, 1.2); /* Zoom fluide */
+  padding: 15px;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.9); 
+  color: rgb(4, 6, 6); 
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); 
+  transition: all 0.5s ease-in-out; 
+  transform: scale(0.3s);
+  
+  }
+  .house-item:hover{
+    transform: scale(1.2, 1.2); /* Zoom fluide */
+    padding: 15px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.9); 
+    color: rgb(4, 6, 6); 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); 
+    transition: all 0.5s ease-in-out; 
+    transform: scale(0.3s);
+    
+    }
+    .boxing-item:hover{
+      transform: scale(1.2, 1.2); /* Zoom fluide */
+      padding: 15px;
+      border-radius: 15px;
+      background-color: rgba(255, 255, 255, 0.9); 
+      color: rgb(4, 6, 6); 
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); 
+      transition: all 0.5s ease-in-out; 
+      transform: scale(0.3s);
+      
+      }
+      .proteine-item:hover{
+        transform: scale(1.2, 1.2); /* Zoom fluide */
+        padding: 15px;
+        border-radius: 15px;
+        background-color: rgba(255, 255, 255, 0.9); 
+        color: rgb(4, 6, 6); 
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); 
+        transition: all 1.0s ease-in-out; 
+        transform: scale(1.1s);
+        
+        }
+
+
+
+/* Texte source pour la présentation */
+.sourc {
+margin-top: 20px;
+margin-right: 20px;
+max-width: 300px;
+}
+.sourc h3 {
+color: white;
+border-bottom: 1px solid white;
+font-family: "Cambria", serif;
+}
+.sourc p {
+color: rgba(255, 255, 255, 0.8); 
+line-height: 1.5; 
+}
+
+/* Logo et identité de marque */
+.logo {
+margin-top: 20px;
+text-align: center;
+}
+.logo img {
+max-width: 150px;
+}
+.logo h1 {
+color: white;
+font-family: "Fantasy";
+font-size: 30px;
+text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); 
+}
+
+/* Plateformes de réseaux sociaux */
+.plat {
+margin-top: 20px;
+display: flex;
+justify-content: center;
+gap: 15px; 
+}
+.plat a {
+display: inline-block;
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.plat a:hover {
+transform: scale(1.2); 
+box-shadow: 0 5px 15px rgba(255, 255, 255, 0.5); 
+background-color: #e6a419;
+border-radius: 10px;
+}
+
+/* Ajouter un espace de crédit dans le footer */
+footer .credits {
+text-align: center;
+padding: 15px;
+background: rgba(0, 0, 0, 0.8);
+color: white;
+font-size: 14px;
+font-family: Arial, sans-serif;
+}
+footer .credits a {
+color: rgb(30, 144, 255);
+text-decoration: none;
+}
+footer .credits a:hover {
+text-decoration: underline;
+}
+
+
+.logo h1{
+color: white;
+font-family: fantasy;
+font-size: 40px;
+}
+.insta{
+  text-align: center;
+  text-decoration: none;
+  color: #ddd;
+  font-size: larger;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-shadow: #dcdee1 2px 2px 2px;
+}    
+footer .p {
+  text-shadow: 2px 2px 5px rgb(223, 215, 215);
+  background-color: rgb(34, 34, 34);
+  color: #ddd;
+  text-align: center
+}
+
+
+        /* Réinitialisation des styles */
+
+.hovimag {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hovimag:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+    opacity: 0.9; 
+}
+.hovimag img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.hovimag:hover img {
+    transform: scale(1.1); 
+}
+
+
+/* Effets d'apparition */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fitness-items, .house-items, .proteine-items, .boxing-items {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.fitness-items {
+  animation-delay: 0.2s;
+}
+
+.house-items {
+  animation-delay: 0.4s;
+}
+
+.proteine-items {
+  animation-delay: 0.6s;
+}
+
+.boxing-items {
+  animation-delay: 0.8s;
+}
+
+/* Éléments internes */
+.fitness-item, .house-item, .proteine-item, .boxing-item {
+  background: rgb(247, 247, 247);
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  margin-bottom: 20px;
+  transition: all 0.5s ease-in-out;
+}
+
+.fitness-item:hover, .house-item:hover, .proteine-item:hover, .boxing-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.fitness-item img, .house-item img, .proteine-item img, .boxing-item img {
+  width: 100%;
+  border-radius: 10px;
+  height: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fitness-item:hover img, .house-item:hover img, .proteine-item:hover img, .boxing-item:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Design réactif */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    position: static;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .imag .content {
+    font-size: 24px;
+  }
+
+  .imag .content button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .fitness-items, .house-items, .proteine-items, .boxing-items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sou {
+    background: linear-gradient(120deg, #2c3e50, #000);
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .lien, .sourc, .logo, .plat {
+    margin: 10px 0;
+    max-width: 100%;
+  }
+
+  .plat {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .logo {
+    order: -1;
+  }
+}
+
+@keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+      box-shadow: 0 0 10px rgba(230, 164, 25, 0.6);
+    }
+    50% {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px rgba(230, 164, 25, 0.8);
+    }
+  }
+  
+
+  /* Assurer que les autres éléments ont un z-index inférieur */
+.menu {
+    z-index: 1000; /* Menu supérieur */
+  }
+  
+  .imag {
+    z-index: 1; /* Image principale */
+  }
+  
+  .fitness-items, .house-items, .proteine-items, .boxing-items {
+    z-index: 2; /* Éléments principaux */
+  }
+  
+  footer {
+    z-index: 3; /* Pied de page */
+  }
+
+  /* Réparer le problème de survol */
+  .fitness-item:hover, .house-item:hover, .proteine-item:hover, .boxing-item:hover {
+    z-index: 10; /* Assurer que l'élément apparaît au-dessus des autres au survol */
+  }
+
+  
+  
+  @keyframes gradientBackground {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+
+  
+  @keyframes scrollbarAnimation {
+    0%, 100% {
+      background: #e6a419;
+    }
+    50% {
+      background: #f4c842;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .p{
+        display: none;
+    }
+    .imag {
+        height: 300px;
+
+    }
+
+    .titre h1 {
+        font-size: 24px; 
+    }
+
+    aside.ft {
+        flex-direction: column; 
+    }
+
+    aside.ft img {
+        width: 100%; 
+    }
+
+    aside.ft p {
+        font-size: 14px; 
+    }
+  }
